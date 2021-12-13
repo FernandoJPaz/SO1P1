@@ -1,0 +1,64 @@
+ 
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+<h1 class="heading"><strong>HTTPClient </strong> Example</h1>
+ 
+ 
+<table class='table'>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>HTML Url</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let repo of Reportes;">
+      <td>{{repo.id}}</td>
+      <td>{{repo.title}}</td>
+      <td>{{repo.path}}</td>
+    </tr>
+  </tbody>
+</table> 
+</div>
+</main>
+ 
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+  
+  
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center"> 
+              <strong>Sales Performance KPIs</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>HTML Url</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let repo of Reportes;">
+                        <td>{{repo.id}}</td>
+                        <td>{{repo.title}}</td>
+                        <td>{{repo.path}}</td>
+                      
+                    </tr>
+                    
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
