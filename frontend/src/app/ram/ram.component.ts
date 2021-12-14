@@ -9,8 +9,16 @@ import { Injectable } from  '@angular/core';
 })
 export class RamComponent implements OnInit {
 
-  private url = 'https://my-json-server.typicode.com/JSGund/XHR-Fetch-Request-JavaScript/posts';
+  private url = 'http://127.0.0.1:3000/cpu';
   Reportes: any[] = [];
+  Process: any[] = [];
+
+  usersx: any;
+  contacts:any[]=[];
+
+  object: any;
+  process:any;
+  objecthijo: any;
 
   constructor(public http: HttpClient) { }
 
@@ -18,8 +26,20 @@ export class RamComponent implements OnInit {
 
     this.http.get<any[]>(this.url)
     .subscribe(data => {
-      console.log(data)
-      this.Reportes = data
+
+      /*
+      this.usersx = data;
+      this.contacts = this.usersx['process']
+      console.log(this.contacts)
+       */
+
+      this.object = data
+      this.process = this.object['process']
+      this.objecthijo = this.process['Object']
+      
+
+      console.log(this.process['hijos'])
+
     }, error => {
       console.log(error)
     });
