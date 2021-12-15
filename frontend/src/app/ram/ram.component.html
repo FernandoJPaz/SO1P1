@@ -48,7 +48,7 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>PID</th>
+                    <th >PID</th>
                     <th>Name</th>
                     <th>STATE</th>
                     <th>RAM</th>
@@ -58,7 +58,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let repo of process;">
-                        <td>{{repo.pid}}</td>
+                        <td scope="row">{{repo.pid}}</td>
                         <td>{{repo.nombre}}</td>
                         <td>{{repo.estado}}</td>
                         <td>{{repo.ram}}</td>
