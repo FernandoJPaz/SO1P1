@@ -12,6 +12,7 @@ export class RamComponent implements OnInit {
   private url = 'http://127.0.0.1:3000/cpu';
   Reportes: any[] = [];
   Process: any[] = [];
+  Process_Total: any[] = [];
 
   usersx: any;
   contacts:any[]=[];
@@ -35,10 +36,12 @@ export class RamComponent implements OnInit {
 
       this.object = data
       this.process = this.object['process']
+      this.Process_Total = this.object['process_total']
+
       this.objecthijo = this.process['Object']
       
 
-      console.log(this.process['hijos'])
+      console.log(this.process)
 
     }, error => {
       console.log(error)

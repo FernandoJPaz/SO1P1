@@ -1,24 +1,31 @@
  
 <main style="margin-top: 58px">
     <div class="container pt-4">
-<h1 class="heading"><strong>HTTPClient </strong> Example</h1>
+<h1 class="heading text-center"><strong>Administracion de Procesos </strong></h1>
  
  
 <table class='table'>
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>HTML Url</th>
-      <th>description</th>
+      <th>Procesos en Ejecucion</th>
+      <th>Procesos Suspendidos</th>
+      <th>Procesos Detenidos</th>
+      <th>Procesos Zombie</th>
+      <th>Total de Procesos</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let repo of Reportes;">
-      <td>{{repo.id}}</td>
-      <td>{{repo.title}}</td>
-      <td>{{repo.path}}</td>
+
+    <tr>
+
+   
+      <td>{{0}}</td>
+      <td>{{0}}</td>
+      <td>{{0}}</td>
+      <td>{{0}}</td>
+      <td>{{Process_Total}}</td>
     </tr>
+
   </tbody>
 </table> 
 </div>
@@ -33,7 +40,7 @@
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center"> 
-              <strong>Sales Performance KPIs</strong>
+              <strong>Informacion General de los Procesos</strong>
             </h5>
           </div>
           <div class="card-body">
@@ -57,17 +64,28 @@
                         <td>{{repo.ram}}</td>
                         <td>{{repo.usuario}}</td>
                         <td>
-
-
-                          
+                          <tr>
+                            <td>PID</td>
+                            <td>Name</td>
+                            <td>STATE</td>
+                            <td>RAM</td>
+                            <td>User</td>
+                            <td>Hijos</td>
+                          </tr>
+                            <tr *ngFor="let x of repo.hijos">
+                              <td>{{x.pid}}</td>
+                              <td>{{x.nombre}}</td>
+                              <td>{{x.estado}}</td>
+                              <td>{{x.ram}}</td>
+                              <td>{{x.usuario}}</td>
+                            </tr>
                         </td>
-                    </tr>
-                    
-                </tbody>
-              </table>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
-      </section>
-    </div>
-  </main>
+      </main>
